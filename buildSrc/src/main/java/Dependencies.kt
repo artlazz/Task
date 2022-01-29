@@ -28,10 +28,22 @@ object Dependencies {
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // DI
-    private const val koinCore = "io.insert-koin:koin-core:${Versions.koin}"
-    private const val koinTest = "io.insert-koin:koin-test:${Versions.koin}"
     private const val koinAndroid = "org.koin:koin-android:${Versions.koinAndroid}"
     private const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koinAndroid}"
+
+    // networking
+    private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    private const val okHttpUrlConnection =
+        "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okHttpUrlConnection}"
+    private const val moshiConverter =
+        "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverter}"
+    private const val loggingInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+
+    // local db (Room)
+    private const val roomRuntime = "androidx.room:room-runtime:${Versions.roomRuntime}"
+    private const val roomRuntimeKtx = "androidx.room:room-ktx:${Versions.roomRuntimeKtx}"
+
 
     val appLibraries = arrayListOf<String>().apply {
         add(kotlinStdLib)
@@ -43,28 +55,33 @@ object Dependencies {
         add(coroutinesAndroid)
         add(navigationFragment)
         add(navigationUi)
-        add(koinCore)
         add(koinAndroid)
         add(koinViewModel)
     }
 
-    val androidTestLibraries = arrayListOf<String>().apply {
+    val appAndroidTestLibraries = arrayListOf<String>().apply {
         add(extJUnit)
         add(espressoCore)
     }
 
-    val testLibraries = arrayListOf<String>().apply {
+    val appTestLibraries = arrayListOf<String>().apply {
         add(junit)
-        add(koinTest)
     }
 
     val domainLibraries = arrayListOf<String>().apply {
-        add(koinCore)
+        add(koinAndroid)
     }
 
     val dataLibraries = arrayListOf<String>().apply {
         add(coreKtx)
-        add(koinCore)
+        add(koinAndroid)
+        add(coroutines)
+        add(retrofit)
+        add(okHttpUrlConnection)
+        add(moshiConverter)
+        add(loggingInterceptor)
+        add(roomRuntime)
+        add(roomRuntimeKtx)
     }
 
     val commonLibraries = arrayListOf<String>().apply {

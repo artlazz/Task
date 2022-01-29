@@ -1,7 +1,7 @@
 package com.task.data.di
 
-import org.koin.dsl.module
+import com.task.data.http.httpModule
 
 val dataModulesList = listOf(
-    module { }
+    httpModule,
 )

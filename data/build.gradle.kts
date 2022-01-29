@@ -9,11 +9,11 @@ android {
     defaultConfig {
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
-//        versionCode = AppConfig.versionCode
-//        versionName = AppConfig.versionName
 
         testInstrumentationRunner = AppConfig.androidTestInstrumentation
         consumerProguardFiles(AppConfig.proguardConsumerRules)
+
+        buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
     }
 
     buildTypes {
@@ -31,11 +31,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    tasks {
-        withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-            kotlinOptions.jvmTarget = "1.8"
-        }
     }
 }
 

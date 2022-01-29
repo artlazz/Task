@@ -53,10 +53,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     //app libs
     implementation(Dependencies.appLibraries)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
     // test libs
-    testImplementation(Dependencies.testLibraries)
-    androidTestImplementation(Dependencies.androidTestLibraries)
+    testImplementation(Dependencies.appTestLibraries)
+    androidTestImplementation(Dependencies.appAndroidTestLibraries)
 }

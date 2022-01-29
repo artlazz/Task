@@ -27,4 +27,14 @@ object Versions {
     // koin
     const val koin = "3.1.5"
     const val koinAndroid = "2.2.0"
+
+    // networking
+    const val retrofit = "2.9.0"
+    const val okHttpUrlConnection = "4.9.3"
+    const val moshiConverter = "2.9.0"
+    const val loggingInterceptor = "4.9.3"
+
+    // local db (Room)
+    const val roomRuntime = "2.4.1"
+    const val roomRuntimeKtx = "2.4.1"
 }

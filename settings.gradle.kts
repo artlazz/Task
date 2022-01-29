@@ -1,2 +1,3 @@
-include(":app", ":domain", ":data", ":common")
+include(":app", ":data", ":common")
 rootProject.name = "Task"
+include(":domain")
