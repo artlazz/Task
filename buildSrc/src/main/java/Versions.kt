@@ -14,4 +14,17 @@ object Versions {
     const val junit = "4.13.2"
     const val extJunit = "1.1.3"
     const val espresso = "3.4.0"
+
+    // coroutines
+    const val coroutineVersion = "1.6.0"
+
+    // navigation component
+    const val navigation = "2.4.0"
+
+    // timber
+    const val timber = "5.0.1"
+
+    // koin
+    const val koin = "3.1.5"
+    const val koinAndroid = "2.2.0"
 }

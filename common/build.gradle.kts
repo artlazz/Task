@@ -9,8 +9,5 @@ configure<JavaPluginConvention> {
 }
 
 dependencies {
-    implementation(project(Modules.common))
-    implementation(project(Modules.data))
-    // domain libs
-    implementation(Dependencies.domainLibraries)
+    implementation(Dependencies.commonLibraries)
 }
