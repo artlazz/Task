@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Task</string>
+
+    <!--  Global section  -->
+    <string name="global_save_user">Save user</string>
+    <string name="global_user_saved">User saved</string>
+    <string name="global_remove_user">Remove user</string>
+    <string name="global_user_avatar">User avatar</string>
+    <string name="global_users">Users</string>
+    <string name="global_saved_users">Saved users</string>
+
+    <string name="global_paramString_comma_2">%1$s, %2$s</string>
+    <string name="global_paramString_space_3">%1$s %2$s %3$s</string>
+    <!--  end Global section  -->
+
+    <!--  UserDetail page  -->
+    <string name="text_UserDetail_btn_save_activated">@string/global_save_user</string>
+    <string name="text_UserDetail_btn_save_deactivated">@string/global_user_saved</string>
+    <string name="text_UserDetail_btn_remove_user">@string/global_remove_user</string>
+    <string name="description_UserDetail_avatar">@string/global_user_avatar</string>
+    <!--  end UserDetail page  -->
+
+    <!--  UserList page  -->
+    <string name="description_UserList_avatar">@string/global_user_avatar</string>
+    <!--  end UserList page  -->
+
+
 </resources>

@@ -33,7 +33,7 @@ abstract class BaseFragment<ViewModel : BaseViewModel, ViewBind : ViewBinding> :
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
 
-        initCollectors()
+        initCollectables()
         initView()
         initViewClickListeners()
         collectBaseChanges()
@@ -67,7 +67,7 @@ abstract class BaseFragment<ViewModel : BaseViewModel, ViewBind : ViewBinding> :
 
     protected abstract fun initView()
     protected open fun initViewClickListeners() {}
-    protected open fun initCollectors() {}
+    protected open fun initCollectables() {}
 
     protected fun navigateFragment(navDirections: NavDirections) {
         navController.navigate(navDirections)

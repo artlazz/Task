@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/_16dp">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/_66dp"
+        android:layout_height="@dimen/_66dp"
+        android:contentDescription="@string/description_UserList_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/Text.A.16.Regular"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/tvSexAndPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="first last" />
+
+    <TextView
+        android:id="@+id/tvSexAndPhone"
+        style="@style/Text.B.12.Regular"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/tvCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="Male, (209) 555-0104" />
+
+    <TextView
+        android:id="@+id/tvCountry"
+        style="@style/Text.B.12.Regular"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/tvAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@id/tvSexAndPhone"
+        tools:text="United States of America" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        style="@style/Text.B.12.Regular"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@id/tvCountry"
+        tools:text="1749 Wheeler Ridge Dr undefined Addison" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

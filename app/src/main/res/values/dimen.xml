@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_66dp">66dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_58dp">58dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_19dp">19dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_14dp">14dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_0dp">0dp</dimen>
+
+    <dimen name="_18sp">18sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+
+    <dimen name="_elev_1dp">1dp</dimen>
+    <dimen name="_elev_2dp">1dp</dimen>
+    <dimen name="_elev_3dp">1dp</dimen>
+
+
+    <dimen name="cornerRadius">6dp</dimen>
+
+</resources>

@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt
+
 plugins {
     id("com.android.library")
+    id("kotlin-parcelize")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -14,6 +18,8 @@ android {
         consumerProguardFiles(AppConfig.proguardConsumerRules)
 
         buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
+        buildConfigField("int", "DATABASE_VERSION", "1")
+        buildConfigField("String", "DATABASE_NAME", "\"task_database\"")
     }
 
     buildTypes {
@@ -38,4 +44,6 @@ dependencies {
     implementation(project(Modules.common))
     // data libs
     implementation(Dependencies.dataLibraries)
+    annotationProcessor("androidx.room:room-compiler:${Versions.roomRuntime}")
+    kapt(Dependencies.dataKaptLibraries)
 }

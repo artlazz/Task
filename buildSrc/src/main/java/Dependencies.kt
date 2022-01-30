@@ -28,8 +28,8 @@ object Dependencies {
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // DI
-    private const val koinAndroid = "org.koin:koin-android:${Versions.koinAndroid}"
-    private const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koinAndroid}"
+    private const val koinCore = "io.insert-koin:koin-core:${Versions.koin}"
+    private const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
 
     // networking
     private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
@@ -43,7 +43,13 @@ object Dependencies {
     // local db (Room)
     private const val roomRuntime = "androidx.room:room-runtime:${Versions.roomRuntime}"
     private const val roomRuntimeKtx = "androidx.room:room-ktx:${Versions.roomRuntimeKtx}"
+    private const val roomCompiler = "androidx.room:room-compiler:${Versions.roomRuntimeKtx}"
 
+    // image processing
+    private const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+
+    // google map
+    private const val googleMap = "com.google.android.gms:play-services-maps:${Versions.googleMap}"
 
     val appLibraries = arrayListOf<String>().apply {
         add(kotlinStdLib)
@@ -56,7 +62,9 @@ object Dependencies {
         add(navigationFragment)
         add(navigationUi)
         add(koinAndroid)
-        add(koinViewModel)
+        add(koinCore)
+        add(glide)
+        add(googleMap)
     }
 
     val appAndroidTestLibraries = arrayListOf<String>().apply {
@@ -82,6 +90,10 @@ object Dependencies {
         add(loggingInterceptor)
         add(roomRuntime)
         add(roomRuntimeKtx)
+    }
+
+    val dataKaptLibraries = arrayListOf<String>().apply {
+        add(roomCompiler)
     }
 
     val commonLibraries = arrayListOf<String>().apply {

@@ -21,12 +21,8 @@ object Versions {
     // navigation component
     const val navigation = "2.4.0"
 
-    // timber
-    const val timber = "5.0.1"
-
     // koin
-    const val koin = "3.1.5"
-    const val koinAndroid = "2.2.0"
+    const val koin = "3.1.2"
 
     // networking
     const val retrofit = "2.9.0"
@@ -37,4 +33,10 @@ object Versions {
     // local db (Room)
     const val roomRuntime = "2.4.1"
     const val roomRuntimeKtx = "2.4.1"
+
+    // Glide
+    const val glide = "4.12.0"
+
+    // map
+    const val googleMap = "18.0.2"
 }
