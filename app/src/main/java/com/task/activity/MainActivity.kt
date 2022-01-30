@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.task.base.BaseFragment
 import com.task.databinding.ActivityMainBinding
-import com.task.util.extension.context.showSnack
+import com.task.util.extension.activity.showSnack
 import com.task.util.extension.viewbinding.viewBinding
 import kotlinx.android.synthetic.main.activity_main.*
 

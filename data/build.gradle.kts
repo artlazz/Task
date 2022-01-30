@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
+    id("kotlin-parcelize")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -14,6 +16,8 @@ android {
         consumerProguardFiles(AppConfig.proguardConsumerRules)
 
         buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
+        buildConfigField("int", "DATABASE_VERSION", "1")
+        buildConfigField("String", "DATABASE_NAME", "\"task_database\"")
     }
 
     buildTypes {
@@ -38,4 +42,6 @@ dependencies {
     implementation(project(Modules.common))
     // data libs
     implementation(Dependencies.dataLibraries)
+    annotationProcessor(Dependencies.dataAnnotationProcessorLibraries)
+    kapt(Dependencies.dataKaptLibraries)
 }

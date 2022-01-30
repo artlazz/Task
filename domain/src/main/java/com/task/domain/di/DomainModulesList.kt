@@ -1,8 +1,8 @@
 package com.task.domain.di
 
 import com.task.data.di.dataModulesList
-import org.koin.dsl.module
+import com.task.domain.mappers.mappersModule
 
 val domainModulesList = listOf(
-    module { }
+    mappersModule
 ) + dataModulesList

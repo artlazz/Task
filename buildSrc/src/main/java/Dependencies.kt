@@ -28,8 +28,8 @@ object Dependencies {
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // DI
-    private const val koinAndroid = "org.koin:koin-android:${Versions.koinAndroid}"
-    private const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koinAndroid}"
+    private const val koinCore = "io.insert-koin:koin-core:${Versions.koin}"
+    private const val koinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
 
     // networking
     private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
@@ -41,10 +41,14 @@ object Dependencies {
         "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
 
     // local db (Room)
-    private const val roomRuntime = "androidx.room:room-runtime:${Versions.roomRuntime}"
-    private const val roomRuntimeKtx = "androidx.room:room-ktx:${Versions.roomRuntimeKtx}"
+    private const val roomRuntime = "androidx.room:room-runtime:${Versions.room}"
+    private const val roomRuntimeKtx = "androidx.room:room-ktx:${Versions.room}"
+    private const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
 
+    // image processing
+    private const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
 
+    /* app module section */
     val appLibraries = arrayListOf<String>().apply {
         add(kotlinStdLib)
         add(coreKtx)
@@ -56,22 +60,23 @@ object Dependencies {
         add(navigationFragment)
         add(navigationUi)
         add(koinAndroid)
-        add(koinViewModel)
+        add(koinCore)
+        add(glide)
     }
-
     val appAndroidTestLibraries = arrayListOf<String>().apply {
         add(extJUnit)
         add(espressoCore)
     }
-
     val appTestLibraries = arrayListOf<String>().apply {
         add(junit)
     }
 
+    /* domain module section */
     val domainLibraries = arrayListOf<String>().apply {
         add(koinAndroid)
     }
 
+    /* data module section */
     val dataLibraries = arrayListOf<String>().apply {
         add(coreKtx)
         add(koinAndroid)
@@ -83,13 +88,15 @@ object Dependencies {
         add(roomRuntime)
         add(roomRuntimeKtx)
     }
-
-    val commonLibraries = arrayListOf<String>().apply {
-//        add()
+    val dataKaptLibraries = arrayListOf<String>().apply {
+        add(roomCompiler)
+    }
+    val dataAnnotationProcessorLibraries = arrayListOf<String>().apply {
+        add(roomCompiler)
     }
 }
 
-//util functions for adding the different type dependencies from build.gradle file
+// util functions for adding the different type dependencies from build.gradle file
 fun DependencyHandler.kapt(list: List<String>) {
     list.forEach { dependency ->
         add("kapt", dependency)
@@ -111,5 +118,11 @@ fun DependencyHandler.androidTestImplementation(list: List<String>) {
 fun DependencyHandler.testImplementation(list: List<String>) {
     list.forEach { dependency ->
         add("testImplementation", dependency)
+    }
+}
+
+fun DependencyHandler.annotationProcessor(list: List<String>) {
+    list.forEach { dependency ->
+        add("annotationProcessor", dependency)
     }
 }
