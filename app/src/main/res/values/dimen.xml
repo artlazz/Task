@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  dp section  -->
+    <dimen name="_120dp">120dp</dimen>
     <dimen name="_66dp">66dp</dimen>
     <dimen name="_60dp">60dp</dimen>
     <dimen name="_58dp">58dp</dimen>

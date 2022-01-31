@@ -2,7 +2,7 @@ package com.task.data.http
 
 import com.squareup.moshi.Moshi
 import com.task.data.BuildConfig.BASE_URL
-import com.task.data.dataservice.apiservice.UserApiService
+import com.task.data.dataservice.apiservice.AlbumApiService
 import com.task.data.http.interceptor.HeaderInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -48,5 +48,5 @@ internal val httpModule = module {
     }
 
     /* Services */
-    single { get<Retrofit>(qualifierRetrofitClient).create(UserApiService::class.java) }
+    single { get<Retrofit>(qualifierRetrofitClient).create(AlbumApiService::class.java) }
 }

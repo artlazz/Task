@@ -22,3 +22,6 @@ fun Int?.isGreaterThan(other: Int?) =
 
 fun Int?.isLessThan(other: Int?) =
     this != null && other != null && this < other
+
+val Int.Companion.DUMMY: Int
+    get() = -1

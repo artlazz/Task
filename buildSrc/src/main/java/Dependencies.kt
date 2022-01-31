@@ -35,6 +35,8 @@ object Dependencies {
     private const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     private const val okHttpUrlConnection =
         "com.squareup.okhttp3:okhttp-urlconnection:${Versions.okHttpUrlConnection}"
+    private const val okHttpIntegration =
+        "com.github.bumptech.glide:okhttp3-integration:${Versions.okHttpIntegration}"
     private const val moshiConverter =
         "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverter}"
     private const val loggingInterceptor =
@@ -62,6 +64,7 @@ object Dependencies {
         add(koinAndroid)
         add(koinCore)
         add(glide)
+        add(okHttpIntegration)
     }
     val appAndroidTestLibraries = arrayListOf<String>().apply {
         add(extJUnit)

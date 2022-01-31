@@ -12,7 +12,6 @@ import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
 import com.task.base.statemodel.ErrorStateModel
 import com.task.base.statemodel.LoadingStateModel
-import com.task.util.collect
 
 abstract class BaseFragment<ViewModel : BaseViewModel, ViewBind : ViewBinding> : Fragment() {
     protected abstract val viewModel: ViewModel
@@ -46,8 +45,8 @@ abstract class BaseFragment<ViewModel : BaseViewModel, ViewBind : ViewBinding> :
 
     private fun collectBaseChanges() {
         with(viewModel) {
-            collect(error, ::handleErrorState)
-            collect(loading, ::handleLoadingState)
+            error.observe(viewLifecycleOwner, ::handleErrorState)
+            loading.observe(viewLifecycleOwner, ::handleLoadingState)
         }
     }
 

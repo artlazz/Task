@@ -27,6 +27,7 @@ object Versions {
     // networking
     const val retrofit = "2.9.0"
     const val okHttpUrlConnection = "4.9.3"
+    const val okHttpIntegration = "4.3.1"
     const val moshiConverter = "2.9.0"
     const val loggingInterceptor = "4.9.3"
 
