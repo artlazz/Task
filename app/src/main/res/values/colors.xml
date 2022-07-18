@@ -23,4 +23,19 @@
     <color name="color_text_A">#000000</color>
     <color name="color_text_B">#909DA6</color>
     <color name="color_text_C">#FFFFFF</color>
+
+
+    // GLYZR
+    <color name="blue_1">#3CCBDA</color>
+    <color name="red_1">#FB7181</color>
+    <color name="orange_1">#FBA05F</color>
+    <color name="green_1">#53D1B6</color>
+
+    <color name="grey_1">#221F20</color>
+    <color name="grey_2">#93959B</color>
+    <color name="grey_3">#DDDEE3</color>
+
+    <color name="mainTextColor">@color/grey_1</color>
+    <color name="mainTextHintColor">@color/grey_2</color>
+    <color name="mainBackgroundColor">@color/white</color>
 </resources>

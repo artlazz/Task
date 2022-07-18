@@ -25,4 +25,21 @@
     <!--  end UserList page  -->
 
 
+    <string name="label_or">or</string>
+    <string name="label_language_en">English</string>
+    <string name="label_language_ru">Russian</string>
+    <string name="label_language_hy">Armenian</string>
+    <string name="label_welcome_to_globbing">Welcome to Globbing</string>
+    <string name="label_enter_your_account">Enter your account</string>
+
+    <string name="btn_continue_with_google">Continue with Google</string>
+    <string name="btn_continue_with_facebook">Continue with Facebook</string>
+    <string name="btn_signIn_sign_up">Sign In / Sign Up</string>
+    <string name="btn_later">Later</string>
+    <string name="btn_forgot_password">Forgot password</string>
+    <string name="btn_do_not_have_an_account_sign_up">Don\'t have an account, Sign up</string>
+
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_password">Password</string>
+
 </resources>

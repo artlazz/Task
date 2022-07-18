@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Task" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Task" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,6 +12,42 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ClickableLayout" parent="Theme.AppCompat">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">@drawable/ripple</item>
+    </style>
+
+    <style name="GlyzrPopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/grey_1</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <!--        <item name="android:itemBackground">@color/white</item>-->
+        <item name="android:background">@drawable/bg_popup</item>
+    </style>
+
+    <style name="GlyzrButton" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/bg_rounded_blue</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:shadowColor">@color/blue_1</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="GlyzrEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/bg_rounded_border_selectable</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableTint">@color/grey_2</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="android:textColorHint">@color/mainTextHintColor</item>
     </style>
 
     <!-- text styles -->
@@ -49,7 +85,6 @@
     <style name="Text.B.12.Regular" parent="Text.B.16.Regular">
         <item name="android:textSize">@dimen/_12sp</item>
     </style>
-
 
 
 </resources>
