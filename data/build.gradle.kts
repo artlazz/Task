@@ -40,8 +40,9 @@ android {
 
 dependencies {
     implementation(project(Modules.common))
+    implementation(project(Modules.domain))
     // data libs
-    implementation(Dependencies.dataLibraries)
-    annotationProcessor(Dependencies.dataAnnotationProcessorLibraries)
-    kapt(Dependencies.dataKaptLibraries)
+    implementation(Dependencies.Collections.Data.dataLibraries)
+    annotationProcessor(Dependencies.Collections.Data.dataAnnotationProcessorLibraries)
+    kapt(Dependencies.Collections.Data.dataKaptLibraries)
 }

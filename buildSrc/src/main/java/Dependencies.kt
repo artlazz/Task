@@ -48,51 +48,55 @@ object Dependencies {
     // image processing
     private const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
 
-    /* app module section */
-    val appLibraries = arrayListOf<String>().apply {
-        add(kotlinStdLib)
-        add(coreKtx)
-        add(appcompat)
-        add(material)
-        add(constraintLayout)
-        add(coroutines)
-        add(coroutinesAndroid)
-        add(navigationFragment)
-        add(navigationUi)
-        add(koinAndroid)
-        add(koinCore)
-        add(glide)
-    }
-    val appAndroidTestLibraries = arrayListOf<String>().apply {
-        add(extJUnit)
-        add(espressoCore)
-    }
-    val appTestLibraries = arrayListOf<String>().apply {
-        add(junit)
-    }
+    object Collections {
+        /* app module section */
+        object App {
+            val appLibraries = arrayListOf<String>().apply {
+                add(kotlinStdLib)
+                add(coreKtx)
+                add(coroutines)
+                add(coroutinesAndroid)
+                add(koinAndroid)
+                add(koinCore)
+                add(glide)
+                add(navigationFragment)
+                add(navigationUi)
+                add(material)
+                add(constraintLayout)
+                add(appcompat)
+            }
+            val appTestLibraries = arrayListOf<String>().apply {
+                add(junit)
+            }
+            val appAndroidTestLibraries = arrayListOf<String>().apply {
+                add(extJUnit)
+                add(espressoCore)
+            }
+        }
 
-    /* domain module section */
-    val domainLibraries = arrayListOf<String>().apply {
-        add(koinAndroid)
-    }
+        /* domain module section */
+        object Domain {
+            val domainLibraries = arrayListOf<String>().apply {
+                add(coroutines)
+                add(koinCore)
+            }
+        }
 
-    /* data module section */
-    val dataLibraries = arrayListOf<String>().apply {
-        add(coreKtx)
-        add(koinAndroid)
-        add(coroutines)
-        add(retrofit)
-        add(okHttpUrlConnection)
-        add(moshiConverter)
-        add(loggingInterceptor)
-        add(roomRuntime)
-        add(roomRuntimeKtx)
-    }
-    val dataKaptLibraries = arrayListOf<String>().apply {
-        add(roomCompiler)
-    }
-    val dataAnnotationProcessorLibraries = arrayListOf<String>().apply {
-        add(roomCompiler)
+        object Data {
+            /* data module section */
+            val dataLibraries = arrayListOf<String>().apply {
+                add(coroutines)
+                add(koinCore)
+                add(retrofit)
+                add(okHttpUrlConnection)
+                add(moshiConverter)
+                add(loggingInterceptor)
+            }
+            val dataKaptLibraries = arrayListOf<String>().apply {
+            }
+            val dataAnnotationProcessorLibraries = arrayListOf<String>().apply {
+            }
+        }
     }
 }
 

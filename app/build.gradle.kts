@@ -49,11 +49,12 @@ android {
 dependencies {
     implementation(project(Modules.common))
     implementation(project(Modules.domain))
+    implementation(project(Modules.data))
     // std libs
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     //app libs
-    implementation(Dependencies.appLibraries)
+    implementation(Dependencies.Collections.App.appLibraries)
     // test libs
-    testImplementation(Dependencies.appTestLibraries)
-    androidTestImplementation(Dependencies.appAndroidTestLibraries)
+    testImplementation(Dependencies.Collections.App.appTestLibraries)
+    androidTestImplementation(Dependencies.Collections.App.appAndroidTestLibraries)
 }

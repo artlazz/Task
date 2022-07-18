@@ -9,7 +9,7 @@ class HeaderInterceptor : Interceptor {
         val requestBuilder = originalRequest.newBuilder()
             .method(originalRequest.method, originalRequest.body)
             .apply {
-//                addHeader() FIXME add header if need
+//                addHeader() FIXME add headers here
             }
             .build()
         return chain.proceed(requestBuilder)
