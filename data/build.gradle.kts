@@ -15,7 +15,7 @@ android {
         testInstrumentationRunner = AppConfig.androidTestInstrumentation
         consumerProguardFiles(AppConfig.proguardConsumerRules)
 
-        buildConfigField("String", "BASE_URL", "\"https://randomuser.me/\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.stormglass.io/v2/\"")
         buildConfigField("int", "DATABASE_VERSION", "1")
         buildConfigField("String", "DATABASE_NAME", "\"task_database\"")
     }

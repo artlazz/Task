@@ -3,6 +3,7 @@ package com.task.data.http
 import com.squareup.moshi.Moshi
 import com.task.data.BuildConfig.BASE_URL
 import com.task.data.dataservice.apiservice.UserApiService
+import com.task.data.dataservice.apiservice.WhetherApiService
 import com.task.data.http.interceptor.HeaderInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -17,6 +18,7 @@ private val qualifierJsonConverter = StringQualifier("qualifierJsonConverter")
 private val qualifierHeaderInterceptor = StringQualifier("qualifierHeaderInterceptor")
 private val qualifierLoggingInterceptor = StringQualifier("qualifierLoggingInterceptor")
 private val qualifierRetrofitClient = StringQualifier("qualifierRetrofitClient")
+private val qualifierRetrofitClientWhether = StringQualifier("qualifierRetrofitClientWhether")
 private val qualifierOkHttpClient = StringQualifier("qualifierOkHttpClient")
 
 internal val httpModule = module {
@@ -39,7 +41,7 @@ internal val httpModule = module {
             .addInterceptor(get<Interceptor>(qualifierLoggingInterceptor))
             .build()
     }
-    single(qualifierRetrofitClient) {
+    single(qualifierRetrofitClientWhether) {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(get(qualifierOkHttpClient))
@@ -48,5 +50,6 @@ internal val httpModule = module {
     }
 
     /* Services */
-    single { get<Retrofit>(qualifierRetrofitClient).create(UserApiService::class.java) }
+//    single { get<Retrofit>(qualifierRetrofitClient).create(UserApiService::class.java) }
+    single { get<Retrofit>(qualifierRetrofitClientWhether).create(WhetherApiService::class.java) }
 }
