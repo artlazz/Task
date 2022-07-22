@@ -3,6 +3,7 @@ package com.task.fragment.home
 import android.Manifest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
+import com.betconstruct.betcocommon.util.extentions.safeLet
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.task.base.BaseFragment
@@ -21,8 +22,10 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
     private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
         if (isGranted) {
             fusedLocationClient.lastLocation.addOnSuccessListener {
-//                    viewModel.getStations(it.latitude,it.longitude)
-                viewModel.getFakeStations()
+                safeLet(it.latitude,it.longitude){latitude,longitude->
+                    viewModel.getStations(latitude,longitude)
+                }
+//                viewModel.getFakeStations()
             }
         } else {
             // Explain to the user that the feature is unavailable because themapkit
