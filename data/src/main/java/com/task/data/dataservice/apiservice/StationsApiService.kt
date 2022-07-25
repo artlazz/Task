@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface StationsApiService {
     @GET("v2/tide/stations")
-    fun fetchStations(): StationsResponse
+    fun fetchStations(): List<StationsResponse>
 }

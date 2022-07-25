@@ -14,7 +14,7 @@ val domainModule = module {
     }
     single<StationsUseCase> {
         StationsUseCaseImpl(
-
+            get()
         )
     }
 }

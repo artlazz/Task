@@ -13,10 +13,18 @@ internal class StationsRepositoryImpl(
     private val stationsApiService: StationsApiService,
     private val toStationsModelMapper: BaseMapper<StationsResponse, Stations>
 ) : StationsRepository {
-    override suspend fun fetchStationsList(): Flow<Stations> =
+    override suspend fun fetchStationsList(): Flow<List<Stations>> =
         serviceExecutor.execute {
-            toStationsModelMapper(
-                stationsApiService.fetchStations()
-            )
+            stationsApiService.fetchStations().map {
+                toStationsModelMapper(
+                    it
+                )
+//                Stations(
+//                    longitude = it.longitude,
+//                    latitude = it.latitude,
+//                    name = it.name,
+//                    source = it.source
+//                )
+            }
         }
 }

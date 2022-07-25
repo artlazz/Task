@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/stationsFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -14,5 +14,9 @@
     <action
         android:id="@+id/action_to_homeFragment"
         app:destination="@id/homeFragment" />
+    <fragment
+        android:id="@+id/stationsFragment"
+        android:name="com.task.fragment.stations.StationsFragment"
+        android:label="StationsFragment" />
 
 </navigation>
